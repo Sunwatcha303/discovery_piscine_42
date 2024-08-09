@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>Simple Calculator</title>
+</head>
+
+<body>
+
+    <form id="calc">
+        <input type="text" id="num1" placeholder="Enter number">
+        <select name="sign" id="operation">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        <input type="text" id="num2" placeholder="Enter number">
+        <button type="button" id="btn">Try me!</button>
+    </form>
+
+    <script>
+        $(document).ready(function () {
+            setInterval(function () {
+                alert('Please, use me...');
+            }, 30000);
+        });
+
+        $('#btn').click(function () {
+            var num1 = $('#num1').val();
+            var num2 = $('#num2').val();
+            var operation = $('#operation').val();
+
+            num1 = parseFloat(num1);
+            num2 = parseFloat(num2);
+
+            var res;
+
+            if ((num1 < 0 || num2 < 0) || isNaN(num1) || isNaN(num2)) {
+                res = 'Error :(';
+            } else {
+                switch (operation) {
+                    case '+':
+                        res = num1 + num2;
+                        break;
+                    case '-':
+                        res = num1 - num2;
+                        break;
+                    case '*':
+                        res = num1 * num2;
+                        break;
+                    case '/':
+                        res = (num2 === 0) ? 'It\'s over 9000!' : num1 / num2;
+                        break;
+                    case '%':
+                        res = (num2 === 0) ? 'It\'s over 9000!' : num1 % num2;
+                        break;
+                    default:
+                        alert('Invalid operation');
+                        return;
+                }
+            }
+            alert(res);
+            console.log(res);
+        })
+    </script>
+
+</body>
+
+</html>

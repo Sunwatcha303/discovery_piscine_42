@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>Balloon</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        #balloon {
+            width: 200px;
+            height: 200px;
+            min-width: 200px;
+            border-radius: 50%;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="balloon"></div>
+
+    <script>
+        $(document).ready(function () {
+            var balloon = $('#balloon');
+            var colors = ["red", "green", "blue"];
+            var idx = 0;
+
+            balloon.click(function () {
+                var width = balloon.width();
+                var height = balloon.height();
+
+                balloon.css({
+                    'width': (width + 10) + 'px',
+                    'height': (height + 10) + 'px'
+                });
+
+                if (balloon.height() >= 420) {
+                    balloon.css({
+                        'width': '200px',
+                        'height': '200px'
+                    });
+                }
+
+                balloon.css('background-color', colors[(((++idx) % colors.length) + colors.length) % colors.length]);
+            });
+
+            balloon.mouseout(function () {
+                var width = balloon.width();
+                var height = balloon.height();
+
+                balloon.css({
+                    'width': (width - 5) + 'px',
+                    'height': (height - 5) + 'px'
+                });
+
+                if (balloon.height() <= 200) {
+                    balloon.css({
+                        'width': '200px',
+                        'height': '200px'
+                    });
+                }
+
+                balloon.css('background-color', colors[(((--idx) % colors.length) + colors.length) % colors.length]);
+            });
+        });
+    </script>
+</body>
+
+</html>

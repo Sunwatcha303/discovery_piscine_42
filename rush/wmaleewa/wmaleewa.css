@@ -1,0 +1,203 @@
+body,
+html {
+    display: flex;
+    width: 100%;
+    /* height: 1000px; */
+    margin: 0;
+    font-family: system-ui;
+    flex-direction: column;
+    scroll-behavior: smooth;
+    background-image: url('./imgs/bg-2.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+head {
+    height: 75px;
+}
+
+#navigation-bar {
+    background-color: rgb(0, 0, 0, 0.75);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 75px;
+    justify-content: space-around;
+    top: 0;
+    width: 100%;
+    position: fixed;
+}
+
+#navigation-bar a {
+    text-decoration: none;
+    color: white;
+}
+
+#navigation-bar a:hover {
+    color: black;
+}
+
+#navigation-username {
+    font-size: 28px;
+    font-weight: bolder;
+}
+
+
+#navigation-bar-inner {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    flex-direction: row;
+}
+
+#navigation-bar-inner a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    padding-left: 16px;
+    padding-right: 16px;
+    text-decoration: none;
+    font-weight: 600;
+    height: 100%;
+}
+
+#navigation-bar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+#about-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 75px;
+}
+
+#about-section h1 {
+    color: white;
+    font-size: 36px;
+}
+
+#container-about {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    background-color: black;
+    padding: 50px;
+    border-radius: 30px;
+    width: 500px;
+}
+
+#profile-image img {
+    border-radius: 10px;
+}
+
+#information {
+    width: 500px;
+}
+
+#information p {
+    color: yellow;
+    text-align: center;
+}
+
+#my-interested {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#my-interested h2 {
+    color: white;
+}
+
+#showcase-section {
+    background-image: url('./imgs/bg.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 75px;
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+.webdev-lang {
+    font-weight: 500;
+}
+
+#certificate {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.cert {
+    width: 250px;
+    height: 200px;
+    background-color: hsl(0, 0%, 50%, 0.5);
+    margin-bottom: 24px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.cert:hover{
+    transform: translate3d(-5px, -5px, -5px);
+}
+
+#skill-container {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+}
+
+#skill-container div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#contact-section {
+    width: 100%;
+    height: 300px;
+    background-color: black;
+    color: white;
+    margin-top: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#contact-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.social{
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    justify-content: center;
+    padding: 8px;
+}
+
+.text{
+    text-decoration: none;
+    color: yellow;
+}

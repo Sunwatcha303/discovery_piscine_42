@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balloon</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        #balloon {
+            width: 200px;
+            height: 200px;
+            min-width: 200px;
+            border-radius: 50%;
+            background-color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="balloon"></div>
+
+    <script>
+        var balloon = document.getElementById('balloon');
+        var colors = ["red", "green", "blue"];
+        var idx = 0;
+
+        balloon.addEventListener('click', function () {
+            var width = balloon.offsetWidth;
+            var height = balloon.offsetHeight;
+
+            balloon.style.width = (width + 10) + 'px';
+            balloon.style.height = (height + 10) + 'px';
+
+            if (balloon.offsetHeight >= 420) {
+                balloon.style.width = 200 + 'px';
+                balloon.style.height = 200 + 'px';
+            }
+
+            balloon.style.backgroundColor = colors[(((++idx) % colors.length) + colors.length) % colors.length];
+        });
+
+        balloon.addEventListener('mouseout', function () {
+            var width = balloon.offsetWidth;
+            var height = balloon.offsetHeight;
+
+            balloon.style.width = (width - 5) + 'px';
+            balloon.style.height = (height - 5) + 'px';
+
+            if (balloon.offsetHeight <= 200) {
+                balloon.style.width = 200 + 'px';
+                balloon.style.height = 200 + 'px';
+            }
+
+            balloon.style.backgroundColor = colors[(((--idx) % colors.length) + colors.length) % colors.length];
+        });
+    </script>
+</body>
+
+</html>

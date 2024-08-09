@@ -1,0 +1,40 @@
+body,
+html {
+    height: 100%;
+    margin: 0;
+}
+
+.text{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#parallax1 {
+
+    background-image: url("https://uploads.dailydot.com/2018/10/olli-the-polite-cat.jpg?q=65&auto=format&w=800&ar=2:1&fit=crop");
+
+    height: 100%;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#blackbox{
+    height: 250px;
+    background-color: black;
+}
+
+#parallax2 {
+    background-image: url("https://www.the-sun.com/wp-content/uploads/sites/6/2023/10/KS-crunchy-cat-comp.jpg?w=620");
+
+    height: 100%;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

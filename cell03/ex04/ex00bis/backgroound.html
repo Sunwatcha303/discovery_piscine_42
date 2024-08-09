@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="backgroound.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>Backgroound</title>
+</head>
+
+<body>
+    <button type="button" id="btn">Click me!</button>
+
+    <script>
+        $(document).ready(function () {
+            $('#btn').click(function(){
+                $('body').css({'background-color':"#" + Math.floor(Math.random() * 16777215).toString(16)})
+            })
+        });
+    </script>
+</body>
+
+</html>
